@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Taksimetre {
+
+	public static void main(String[] args) {
+	int km;
+	double herKM = 2.20;
+	double toplam;
+	
+	Scanner input = new Scanner(System.in);
+
+	System.out.println("Mesafe(km): ");
+	km=input.nextInt();
+	
+	toplam = (km + herKM); 
+	toplam += 10; //açılış ücreti
+	
+	
+	//indi bindi hesaplaması
+	toplam =(toplam <20) ? 20 : toplam;
+	
+	System.out.println("Toplam ödenecek miktar: " + toplam);
+	
+	
+	}
+
+}
