@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class Manav {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		double armutToplam,
+		elmaToplam,
+		domatesToplam,
+		patlıcanToplam,
+		muzToplam;
+		double armut = 2.14;
+		double elma = 3.67;
+		double domates = 1.11;
+		double muz = 0.95;
+		double patlıcan = 5.00;
+		double toplam;
+		double kilo;
+		double armutKg,elmaKg,domatesKg,muzKg,patlıcanKg;
+		
+		System.out.print("Kaç kilo armut alacaksınız? : ");
+		armutKg = sc.nextDouble();
+		armutToplam= armut * armutKg;
+		
+		System.out.print("Kaç kilo elma alacaksınız? : ");
+		elmaKg = sc.nextDouble();
+		elmaToplam= elma * elmaKg;
+		
+		System.out.print("Kaç kilo muz alacaksınız? : ");
+		muzKg = sc.nextDouble();
+		muzToplam= muz * muzKg;
+		
+		System.out.print("Kaç kilo patlıcan alacaksınız? : ");
+		patlıcanKg = sc.nextDouble();
+		patlıcanToplam= patlıcan * patlıcanKg;
+		
+		System.out.print("Kaç kilo domates alacaksınız? : ");
+		domatesKg = sc.nextDouble();
+		domatesToplam= domates * domatesKg;
+		
+		toplam = domatesToplam + patlıcanToplam + elmaToplam + armutToplam + muzToplam;
+		System.out.println("Toplam: " + toplam + " TL");
+		
+
+	}
+
+}
