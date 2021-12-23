@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class SinifGecme {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		double mat,
+	           fizik,
+	           turkce,
+	           kimya,
+	           muzik;
+		double toplam= 0.0;
+		double ortalama;
+		
+		System.out.print("Matematik:");
+		mat = sc.nextDouble();
+		if(mat >=0 && mat <=100) {
+			toplam += mat;
+		}
+		else {
+			System.out.println("Hatalı puan girdiniz.");
+			
+		}
+		System.out.print("Fizik:");
+		fizik = sc.nextDouble();
+		if(fizik >=0 && fizik <=100) {
+			toplam += fizik;
+		}
+		else {
+			System.out.println("Hatalı puan girdiniz.");
+			
+		}
+		System.out.print("Kimya:");
+		kimya = sc.nextDouble();
+		if(kimya >=0 && kimya <=100) {
+			toplam += kimya;
+		}
+		else {
+			System.out.println("Hatalı puan girdiniz.");
+			
+		}
+		System.out.print("Türkçe:");
+		turkce = sc.nextDouble();
+		if(turkce >=0 && turkce <=100) {
+			toplam += turkce;
+		}
+		else {
+			System.out.println("Hatalı puan girdiniz.");
+			
+		}
+		System.out.print("Müzik:");
+		muzik = sc.nextDouble();
+		if(muzik >=0 && muzik <=100) {
+			toplam += muzik;
+		}
+		else {
+			System.out.println("Hatalı puan girdiniz.");
+			
+		}
+		
+		ortalama = toplam / 5;
+		System.out.println("Ortalaman:" + ortalama);
+		
+		if(ortalama >=55) {
+			System.out.println("Sınıfı Geçtin");
+		}
+		else {
+			System.out.println("Kaldın");
+		}
+		
+
+	}
+
+}
