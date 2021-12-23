@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class KullanıcıGirisi {
+
+	public static void main(String[] args) {
+
+		String username;
+		String password;
+		String upd;
+		String newUsername, newPassword;
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Kullanıcı adını giriniz:");
+		username=sc.nextLine();
+		
+		System.out.println("Şifre giriniz:");
+		password=sc.nextLine();
+		
+		
+		if(username.equals("patika") && password.equals("1234")){
+			System.out.println("Başarıyla giriş yapıldı");
+		}
+		else {
+			System.out.println("Bilgileriniz yanlış");
+			
+			System.out.println("Bilgilerini güncellemek ister misiniz?('E'/'H')");
+			
+			upd=sc.nextLine();
+			switch(upd) {
+			case ("E"):
+				
+				System.out.println("Yeni kullanıcı adı giriniz:");
+			    newUsername=sc.nextLine();
+			    System.out.println("Yeni şifrenizi giriniz:");
+			    newPassword=sc.nextLine();
+			    
+			    if(newUsername.equals(username) || newPassword.equals(password)) {
+			    	
+			    	System.out.println("Eski kullanıcı adını veya şifreyi girdiniz.");
+			    	
+			    }else {
+			    	username = newUsername;
+			    	password = newPassword;
+			    	System.out.println("Kullanıcı adı başarıyla değiştirildi");
+			    	
+			    }
+			    break;
+			case("H"):
+				System.out.println("Programdan çıkış yapılıyor");
+			
+			    break;
+			default:
+				System.out.println("Geçerli işlem seçmediniz.");
+			}
+			
+		}
+		
+	}
+
+}
