@@ -1,0 +1,131 @@
+import java.util.Scanner;
+
+public class Burc {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        byte ay, gün;
+        String zodiac = null;
+
+        System.out.print("AY: ");
+        ay = input.nextByte();
+
+        System.out.print("GÜN: ");
+        gün = input.nextByte();
+
+        switch (ay) {
+            case 1:
+                if (gün < 20 && gün > 0) {
+                    zodiac = "OĞLAK.";
+                } else if (gün >= 20 && gün <= 31) {
+                    zodiac = "KOVA.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 2:
+                if (gün < 19 && gün > 0) {
+                    zodiac = "KOVA.";
+                } else if (gün >= 19 && gün <= 29) {
+                    zodiac = "BALIK.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 3:
+                if (gün < 21 && gün > 0) {
+                    zodiac = "BALIK.";
+                } else if (gün >= 21 && gün <= 31) {
+                    zodiac = "KOÇ.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 4:
+                if (gün < 20 && gün > 0) {
+                    zodiac = "KOÇ.";
+                } else if (gün >= 20 && gün <= 31) {
+                    zodiac = "BOĞA.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 5:
+                if (gün < 21 && gün > 0) {
+                    zodiac = "BOĞA.";
+                } else if (gün >= 21 && gün <= 31) {
+                    zodiac = "İKİZLER.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 6:
+                if (gün < 21 && gün > 0) {
+                    zodiac = "İKİZLER.";
+                } else if (gün >= 21 && gün <= 30) {
+                    zodiac = "YENGEÇ.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 7:
+                if (gün < 23 && gün > 0) {
+                    zodiac = "YENGEÇ.";
+                } else if (gün >= 23 && gün <= 31) {
+                    zodiac = "ASLAN.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 8:
+                if (gün < 23 && gün > 0) {
+                    zodiac = "ASLAN.";
+                } else if (gün >= 23 && gün <= 31) {
+                    zodiac = "BAŞAK.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 9:
+                if (gün < 23 && gün > 0) {
+                    zodiac = "BAŞAK.";
+                } else if (gün >= 23 && gün <= 30) {
+                    zodiac = "TERAZİ.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 10:
+                if (gün < 23 && gün > 0) {
+                    zodiac = "TERAZİ.";
+                } else if (gün >= 23 && gün <= 31) {
+                    zodiac = "AKREP.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 11:
+                if (gün < 22 && gün > 0) {
+                    zodiac = "AKREP.";
+                } else if (gün >= 22 && gün <= 30) {
+                    zodiac = "YAY.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            case 12:
+                if (gün < 20 && gün > 0) {
+                    zodiac = "YAY.";
+                } else if (gün >= 20 && gün <= 31) {
+                    zodiac = "KOVA.";
+                } else {
+                    System.out.print("Hatalı değer girdiniz");
+                }
+                break;
+            default:
+                System.out.print("Hatalı değer girdiniz");
+                break;
+
+        }
+        System.out.println("Burcunuz " + zodiac);
+    }
+}
