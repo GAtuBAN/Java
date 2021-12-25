@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class BiletSatis {
+
+	public static void main(String[] args) {
+			Scanner sc=new Scanner(System.in);
+			double tarife=0.1;//km başına alınacak para
+			//Gidiş dönüş indirimini ve yaş indirimini default olarak 1'e ayarladık.
+			//Çünkü yolcu indirimlerden yararlanabilecek bir aralıkta değilse
+			//indirimleri 0 ile değil 1 ile çarparak yansıtıyoruz
+			double km, GDind = 1, indTutar, yasInd = 1, normalTutar, Toplam ;
+			int age;
+			int tip;
+			/***km ==> mesafe
+			 *  GDind ==> gidiş-dönüş indirimi
+			 *  yasInd ==> yaş indirimi
+			 *  indTutar ==> normal tutar - yaş indirimi
+			 *  tip ==> gidiş-dönüş mü yoksa tek yön mü
+			 *  ***/
+			System.out.print("Mesafe Giriniz(km): ");
+			km=sc.nextDouble();
+			System.out.print("Yaş:");
+			age=sc.nextInt();
+			
+			System.out.println("Yolculuk tipi(tek yön:1 gidiş-dönüş:2) giriniz: ");
+			tip=sc.nextInt();
+			
+			if ( km<0 || age <0 || tip <0 || tip>2) {
+				System.out.println("Hatalı giriş yaptınız");
+			}
+			else {
+				if(age <12) {
+					yasInd=0.5;
+				}
+				else if(age >= 12 && age<24) {
+					yasInd=0.9;
+				}
+				else if(age>65) {
+					yasInd=0.7;
+				}
+				
+				if(tip == 2) {
+					GDind = 1.6;//2 tane %20 indirim yapılıyor
+				}
+				
+				Toplam = km * tarife * yasInd * GDind;
+				System.out.println("Toplam tutar: " + Toplam);
+			}
+	}
+
+}
