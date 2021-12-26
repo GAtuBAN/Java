@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class DordunKatlari {
+
+	public static void main(String[] args) {
+		int n;
+		int toplam=0;
+		Scanner sc=new Scanner(System.in);
+		
+		do {
+			System.out.println("Sayı giriniz: ");
+			n=sc.nextInt();
+			if(n %4 == 0) {
+				toplam +=n;
+				
+			}
+		}
+		while(n %2 == 0);//çift değer girildiği sürece döngüyü devam ettirir.
+		
+		System.out.println("Toplam: " + toplam);
+	}
+
+}
