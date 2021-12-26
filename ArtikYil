@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ArtikYil {
+
+	public static void main(String[] args) {
+		int year;
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Yıl giriniz:");
+		year=sc.nextInt();
+		if(year % 4 == 0) {
+			System.out.println(year + " yılı artık yıldır ");
+			if(year % 400 == 0) {
+				System.out.println(year + " yılı aynı zamanda 400'ün katı olan artık yıllardandır");
+				
+			}else {
+				System.out.println(year + " yılı 400'ün katı olan artık yıllardan değildir. Sadece 4'ün katı olan artık yıllardandır.");
+			}
+		}else {
+			System.out.println(year + " yılı artık yıl değildir");
+		}
+
+	}
+
+}
