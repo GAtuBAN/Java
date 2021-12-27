@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Kombinasyon {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num1;
+		int num2;
+		int comb;
+		int fact1=1;
+		int fact2=1;
+		int fact3=1;
+		System.out.println("1.sayıyı giriniz:");
+		num1=sc.nextInt();
+		
+		System.out.println("2.sayıyı giriniz:");
+		num2=sc.nextInt();
+		
+		
+		for(int i=1;i<=num1;i++) {
+			fact1=fact1 * i;
+		}
+		for(int i=1;i<=num2;i++) {
+			fact2=fact2 * i;
+		}
+		for(int i=1;i<=(num1 - num2);i++) {
+			fact3=fact3 * i;
+		}
+		comb=fact1 / (fact2 * fact3);
+		System.out.println(comb);
+	}
+
+}
