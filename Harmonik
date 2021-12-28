@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Harmonik {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Sayı giriniz:");
+		
+		int n = sc.nextInt();
+		double result = 0.0;
+		
+		for(int i = 1 ; i <=n; i++ ) {
+			result += (1.0/i);//double integer'a bölünmeli
+			//int/double da oluyor
+		}
+		System.out.println(result);
+	}
+
+}
