@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class BigOne {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number,min=0,max=0;
+		System.out.println("Girilecek sayı miktarı:");
+		int Num=sc.nextInt();
+		for(int i=1;i<=Num;i++) {
+			System.out.println(i + ". sayı:");
+			number = sc.nextInt();
+			if(i == 1) {
+				max=number;
+				min=number;
+				System.out.println("en büyük= "+max);
+		        System.out.println("en küçük= "+min);
+				System.out.println("------------------------");
+			}
+			if(number>max){
+				max=number;
+				System.out.println("en büyük= "+max);
+		        System.out.println("en küçük= "+min);
+		        System.out.println("------------------------");
+				
+				
+			}
+			if(min>number) {
+                min=number;
+                System.out.println("en büyük= "+max);
+                System.out.println("en küçük= "+min);
+                System.out.println("------------------------");
+        		
+        }
+			
+		}
+		System.out.println("finalde en büyük= "+max);
+        System.out.println("finalde en küçük= "+min);
+		
+
+	}
+
+}
