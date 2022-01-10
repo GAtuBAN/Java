@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Palindrom {
+	
+    static boolean isPalindrom(int num) {
+    	
+        int temp = num, reverseNum = 0;
+        while (temp != 0) {
+        	
+            int lastNum = temp % 10;
+            reverseNum = (reverseNum * 10) + lastNum;
+            temp /= 10;
+        }
+        
+        if (num == reverseNum) {
+            return true;
+        } 
+        else
+            return false;
+    }
+    public static void main(String[] args) {
+        int count;
+        
+      Scanner sc =new Scanner(System.in);
+      System.out.print("Number :");
+      count=sc.nextInt();
+      
+      System.out.print(isPalindrom(count));
+    }
+}
