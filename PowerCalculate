@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class PowerCalculator {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+		System.out.print("Taban:");
+		int  num = sc.nextInt();
+		System.out.print("Üs:");
+		int pow = sc.nextInt();
+		System.out.println("Sonuç: " + power(num,pow));
+
+	}
+	static int power(int num, int pow) {
+		if(pow == 0) {
+			return 1;
+			
+		}else
+			return num*power(num,pow-1);
+			
+		
+	}
+
+}
