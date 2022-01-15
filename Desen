@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Desen {
+
+	public static void main(String[] args) {
+		int n, temp;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Sayı giriniz:");
+		n = sc.nextInt();
+		temp=n;
+		azalt(n,temp);
+		
+
+	}
+	static int azalt(int n,int temp) {
+		System.out.print(n + " ");
+		if(n<=0) {
+			return arttir(n+5,temp);
+			
+		}
+		else {
+			return azalt(n-5,temp);
+		}
+	}
+	static int arttir(int n, int temp) {
+		System.out.print(n + " ");
+		if(n==temp) {
+			return 0;
+		}else {
+			return arttir(n+5,temp);
+		}
+	}
+
+}
