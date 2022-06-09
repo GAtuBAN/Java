@@ -1,0 +1,49 @@
+package diziler;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Siralama {
+
+	public static void main(String[] args) {
+		// GİRİLEN SAYILARI SIRALAMA
+		
+		int size, temp=0;
+		Scanner sc=new Scanner(System.in);
+				System.out.println("Dizinin eleman sayısı: ");
+				size=sc.nextInt();
+				if(size>0) {
+					int[] arr = new int[size];
+					System.out.println("Dizinin elemanlarını giriniz");
+					for(int i=0;i<size;i++) {
+						
+						System.out.printf("%d. elaman: ", i+1);
+						arr[i]=sc.nextInt();
+					}
+					
+					Arrays.sort(arr);
+					
+					/*FONKSİYON İLE SIRALAMAK İSTİYORSAK BUNU YAZABİLİRİZ
+					for(int i=0;i<size;i++)
+		            {
+		                for(int j=i+1;j<size;j++)
+		                {
+		                    if(arr[i] > arr[j])
+		                    {
+		                        temp = arr[i];
+		                        arr[i] = arr[j];
+		                        arr[j] = temp;
+		                    }
+		                }
+		            }
+		            */
+					
+					System.out.println("Siralama: " + Arrays.toString(arr));
+					
+				}
+				else {System.out.println("Hata");
+				}
+		
+
+	}
+
+}
