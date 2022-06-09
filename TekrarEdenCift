@@ -1,0 +1,41 @@
+import java.util.Arrays;
+//Dizideki tekrar eden çift sayıları bulan program
+public class TekrarEdenCift{
+	static boolean isFind(int[] arr, int value){//duplicate(dup) içine atacağımız değer daha önce var mı yok mu. varsa ekleme yoksa ekle
+	for(int i:arr) {
+		if(i ==value) {
+			return true;
+		}
+	}
+	return false;
+	}
+
+	public static void main(String[] args) {
+		// Bir dizideki tekrar eden sayıları belirten program
+		int[] list = {1,2,3,3,3,22,81,102,63,2,9,22,1,102};
+		int[] dup=new int[list.length];
+		int startIndex=0;
+		for(int i =0;i<list.length;i++){
+			for(int j=0;j<list.length;j++){
+				
+				  if((i != j) && (list[i]==list[j])){
+					 
+					if(!isFind(dup , list[i])) {
+			
+					    dup[startIndex++] = list[i];
+					}	break;
+					  }
+				}	
+			
+		}
+		System.out.println(Arrays.toString(dup));
+		System.out.println("-----------------------------");
+		
+		for (int value : dup) {
+			if(value !=0 && (value%2 !=1)) {
+				System.out.println(value);
+			}
+		}
+	}
+
+}
