@@ -1,0 +1,26 @@
+//Dizideki en küçük ve en büyük değeri bulan program
+public class MinMaks {
+
+	public static void main(String[] args) {
+		//köşeli parantez yaptık çünkü bu bir array olacak
+		int[] list= {56, 34, 1, 8, 101, -2, -33};
+		//min = list[0] min değer listenin 2.elemanından küçük ise anlık min değerini 2.elemana eşitleriz
+		//max = list[0] 
+		int min = list[0];
+		int max = list[0];
+		for(int i : list) {//tüm elemanları gezmemizi sağlayacak
+			if(i <min) {
+				min = i;
+				
+			}
+			if(i > max) {
+				max = i;
+				
+			}
+			
+		}
+		System.out.println("Minimum değer: " + min);
+		System.out.println("Maksimum değer: " + max);
+	}
+
+}
