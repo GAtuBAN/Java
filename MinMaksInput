@@ -14,7 +14,7 @@ public class MinMaksInput {
 		System.out.print("Bir sayı giriniz: ");
 		int number = sc.nextInt();
 		
-		Arrays.sort(list);;
+		Arrays.sort(list);
 		for(int i : list) {
 			
 		    if(i < number) {
