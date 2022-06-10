@@ -1,0 +1,40 @@
+package diziler;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Transpoz {
+
+	public static void main(String[] args) {
+		int[][] arr = new int[2][3];
+        int[][] Transpoz = new int[3][2];
+		
+        
+        Scanner sc = new Scanner(System.in);
+        for (int i=0;i< arr.length;i++){
+        	for (int j = 0; arr[i].length > j; j++){
+                System.out.print("Matrix "+"["+i+"]"+"["+j+"]"+":");
+                arr[i][j]=sc.nextInt();
+
+            }
+        }
+        System.out.println("Matriks:");
+        for (int i=0;i< arr.length;i++){
+
+            for (int j=0;j<arr[i].length;j++){
+
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("Transpozu:");
+        for(int i=0; i < Transpoz.length; i++) {
+        	for(int j=0;j<Transpoz[i].length;j++) {
+        		Transpoz[i][j]=arr[j][i];
+        		System.out.print(Transpoz[i][j]+ " ");
+        	}
+        	System.out.println();
+        }
+
+
+	}
