@@ -1,0 +1,25 @@
+public class Palindromik {
+
+	public static void main(String[] args) {
+		System.out.println(isPalindrome("abba"));
+		System.out.println(isPalindrome("abca"));
+		
+
+	}
+	
+	static boolean isPalindrome(String str) {
+		int i = 0;//başlangıç için verilen numara
+		int j=str.length() - 1;//0dan başladığı için -1 yazdık
+		while(i<j) {
+			if(str.charAt(i) != str.charAt(j)){
+				return false;
+			}
+			i++;
+			j--;
+		}
+		
+		return true;
+		
+	}
+
+}
